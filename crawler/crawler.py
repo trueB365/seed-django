@@ -1,18 +1,41 @@
-from video_crawler.hub_crawler import Pronhub
-from video_crawler.xxx_crawler import XXXpron
-from video.models import Video
-import time
+import os
 import random
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
+
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
+
+import django
+django.setup()
+
+
+from app import hub_crawler, xxx_crawler, models
+import time
 from datetime import date
 
+
 T = 3600
-video_crawlers_item = {'pronhub': Pronhub, "xvideos": XXXpron}
-key_words_1 = ["chinese couples", "chinese", "taiwan", "korea", "china", "chinese girl", "asia", "asia girl"]
+video_crawlers_item = {
+    "pronhub": hub_crawler.Pronhub,
+    "xvideos": xxx_crawler.XVideosCrawler
+}
+
+key_words_1 = [
+    "chinese couples",
+    "chinese",
+    "taiwan",
+    "korea",
+    "china",
+    "chinese girl",
+    "asia",
+    "asia girl",
+]
 key_words_2 = ["3p", "blow job", "sm", "fuck", "girl", "beautiful", "women", "party"]
 
 
 def wash_video(days=1):
-    for v in Video.objects.all():
+    for v in models.Video.objects.all():
         _days = (date.today() - v.video_day).days
         if _days > days:
             v.delete()
@@ -23,30 +46,28 @@ def wash_video(days=1):
 def sleep_activate_orm(t):  # t 为小时数
     for i in range(t):
         time.sleep(T)
-        print(Video.objects.all().count())
+        print(models.Video.objects.all().count())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
-    xxx = XXXpron()
-    hub = Pronhub()
+    xxx = xxx_crawler.XVideosCrawler()
+    # hub = Pronhub()
     T = 60
-
     while True:
         m = 0
         for i, j in zip(key_words_1, key_words_2):
-            v_size = len(Video.objects.all())
-            print("现存视频量：{}".format(v_size))
+            v_size = len(models.Video.objects.all())
+            print(f"Table size：{v_size}")
             k = random.randint(1, 20)
-            hub.insert_video(i, k)
-            hub.insert_video(j, k)
-            print("暂停 {}".format(T))
+            # hub.insert_video(i, k)
+            # hub.insert_video(j, k)
+            print(f"Run again in {T}")
             time.sleep(T)
             xxx.insert_video(i, k)
             xxx.insert_video(j, k)
             #     for obj in Video.objects.order_by("video_update")[:v_size/]:
             #         obj.delete()
-            print("暂停 {}".format(T))
             sleep_activate_orm(11)  # 需
             m += 1
             if m == 2:

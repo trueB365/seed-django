@@ -1,9 +1,4 @@
 from django.db import models
-from datetime import datetime
-# Create your models here.
-
-
-from django.db import models
 from django.utils import timezone
 
 
@@ -22,3 +17,6 @@ class Video(models.Model):
 
     def __str__(self):
         return "video name: {}".format(self.video_title)
+
+    class Meta:
+        db_table = 'video_video'
