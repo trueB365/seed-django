@@ -10,7 +10,8 @@ import django
 django.setup()
 
 
-from app import hub_crawler, xxx_crawler, models
+from crawler.py.app import xxx_crawler, models
+from crawler.py.app import hub_crawler
 import time
 from datetime import date
 
