@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio';
-import * as request from 'request';
+import request from 'request';
 
 export default class RequestHandler {
   public static async fetchHTMLPage(url: string) {
