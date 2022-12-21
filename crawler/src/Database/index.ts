@@ -1,8 +1,8 @@
 import { Sequelize } from 'sequelize-typescript';
-import { DATABASE_URL } from '../config/app.config';
+import { DATABASE_URL } from '../Config/app.config';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const config = require('../config/sequelize.config');
+const config = require('../Config/sequelize.config');
 console.debug('tsc:events.schema.ts', JSON.stringify(config, null, 3));
 
 const db = new Sequelize(DATABASE_URL, {

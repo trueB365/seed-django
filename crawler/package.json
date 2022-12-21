@@ -4,14 +4,14 @@
   "description": "Craw adult content sites and store the in the database",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf dist/*",
-    "copy": "ts-node tools/copyAssets.ts",
-    "lint": "eslint . --ext .ts --fix",
-    "tsc": "tsc",
-    "dev": "ts-node src/app.ts",
-    "postinstall": "cross-env NODE_ENV=production npm-run-all clean tsc copy",
-    "start:dev": "cross-env NODE_ENV=development npm-run-all lint dev",
-    "start": "node ./dist/src/app.js"
+      "clean": "rimraf dist/*",
+      "copy": "ts-node tools/copyAssets.ts",
+      "lint": "eslint . --ext .ts --fix",
+      "tsc": "./node_modules/.bin/tsc -p ./tsconfig.json",
+      "start:tsc": "ts-node src/app.ts",
+      "build:tsc": "./node_modules/.bin/cross-env NODE_ENV=production npm-run-all clean tsc",
+      "start:dev": "./node_modules/.bin/cross-env NODE_ENV=development npm-run-all lint start:tsc",
+      "start": "node ./dist/app.js"
   },
   "keywords": [
     "adult",
@@ -25,7 +25,6 @@
     "@types/dotenv": "^6.1.1",
     "@types/express": "^4.17.1",
     "@types/helmet": "0.0.44",
-    "@types/kill-port": "^2.0.0",
     "@types/morgan": "^1.7.37",
     "@types/node": "^12.20.55",
     "@types/node-cron": "^3.0.6",
@@ -57,7 +56,6 @@
     "express": "^4.17.1",
     "http-status": "^1.5.2",
     "joi": "^17.7.0",
-    "kill-port": "^2.0.1",
     "morgan": "^1.9.1",
     "node-cron": "^3.0.2",
     "pg": "^8.8.0",
