@@ -103,4 +103,5 @@ venv.bak/
 # mypy
 .mypy_cache/
 crawler/node_modules
-
+app.env
+crawler/.env.development
