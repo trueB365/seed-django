@@ -1,5 +1,12 @@
-import { Table, Column, PrimaryKey, AutoIncrement, Default, DataType } from 'sequelize-typescript';
-import { Base } from '../base';
+import {
+  Table,
+  Column,
+  PrimaryKey,
+  AutoIncrement,
+  Default,
+  DataType,
+} from "sequelize-typescript";
+import { Base } from "../base";
 
 export interface IVideo {
   video_link?: string;
@@ -16,7 +23,7 @@ export interface IVideo {
 }
 
 @Table({
-  tableName: 'video_video',
+  tableName: "video_video",
   paranoid: true,
   timestamps: true,
 })
@@ -33,7 +40,7 @@ export default class Video extends Base<IVideo> implements IVideo {
   @Column(DataType.TEXT)
   video_image: string;
 
-  @Default('straight')
+  @Default("straight")
   @Column(DataType.TEXT)
   video_keyword: string;
 

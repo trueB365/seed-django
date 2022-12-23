@@ -1,24 +1,26 @@
+import binascii
+import os
+
 from django.shortcuts import render
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from .models import Video
-import binascii, os
-from django.utils import timezone
-# from crawler.crawler import video_crawlers_item
+from .serializers import VideoSerializer
+
+
+class VideoListApiView(APIView):
+    def get(self, request, *args, **kwargs):
+        video_list = Video.objects.order_by("video_update")[:20]
+        serializer = VideoSerializer(video_list, many=True)
+        return Response({"data": serializer.data}, status=status.HTTP_200_OK)
 
 
 # Create your views here.
 def create_key():
     return binascii.b2a_base64(os.urandom(50)).decode()
 
-
-def index(request):
-    last_video_list = Video.objects.order_by("video_update")[:10]
-    print(last_video_list)
-    context = {"last_video_list": last_video_list}
-    return render(request, "../templates/index.html", context)
-
-
-# def refresh_video_link(V):
-#     return video_crawlers_item[V.video_source].get_video_link(V.video_url)
 
 
 def play(request, vid):
