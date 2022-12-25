@@ -1,5 +1,5 @@
-import { generateXvideosScrappingResult } from "./Xvideos/xvideos.helper";
+import { generateXvideosScrappingResult } from './Xvideos/xvideos.helper';
 
 export const videoExtractor = async () => {
-  await generateXvideosScrappingResult("https://xvideos.com/");
+  await generateXvideosScrappingResult('https://xvideos.com/');
 };

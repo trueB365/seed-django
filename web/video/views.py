@@ -5,6 +5,7 @@ from django.shortcuts import render
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.views.generic import TemplateView
 
 from .models import Video
 from .serializers import VideoSerializer
@@ -21,6 +22,13 @@ class VideoListApiView(APIView):
 def create_key():
     return binascii.b2a_base64(os.urandom(50)).decode()
 
+
+class HomeView(TemplateView):
+    template_name = "index.html"
+    def get_context_data(self, *args, **kwargs):
+        context = super(HomeView, self).get_context_data(*args, **kwargs)
+        context["pageTitle"] = "Home | Pornoxeia.com"
+        return context
 
 
 def play(request, vid):

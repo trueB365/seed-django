@@ -1,0 +1,15 @@
+<div class="text-brdc">
+    <div class="relative overflow-hidden rounded mb-3.5">
+        <span class="absolute z-[3] top-[8px] right-[8px] text-[#fff] text-[14px] pointer-events-none">${videosArr[v].video_length}</span>
+        <a href="/video/${videosArr[v].id}">
+            <img alt="${videosArr[v].video_title}" class="rounded-lg object-cover w-full h-full"
+                 src="${videosArr[v].video_image}">
+        </a>
+    </div>
+    <a class="whitespace-nowrap overflow-hidden text-ellipsis text-[#fff] tracking-normal text-[.875rem] mb-3.5"
+       href="/video/${videosArr[v].id}">
+        <div class="whitespace-nowrap overflow-hidden text-ellipsis text-[#fff] tracking-normal text-[.875rem] mb-3.5">
+            ${videosArr[v].video_title}
+        </div>
+    </a>
+</div>

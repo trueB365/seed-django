@@ -1,5 +1,5 @@
-import { Browser, Page, launch } from "puppeteer";
-import { HEADLESS_STATUS } from "../Config/app.config";
+import { Browser, Page, launch } from 'puppeteer';
+import { HEADLESS_STATUS } from '../Config/app.config';
 
 export interface IPuppeteer {
   browser: Browser;
@@ -10,7 +10,7 @@ export class PuppeteerService {
   async startDesktopBrowser(): Promise<IPuppeteer> {
     const launchOptions = {
       headless: JSON.parse(HEADLESS_STATUS),
-      args: ["--no-sandbox"],
+      args: ['--no-sandbox'],
     };
 
     const browser = await launch(launchOptions);

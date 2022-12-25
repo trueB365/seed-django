@@ -1,5 +1,5 @@
-import * as cheerio from "cheerio";
-import request from "request";
+import * as cheerio from 'cheerio';
+import request from 'request';
 
 export default class RequestHandler {
   public static async fetchHTMLPage(url: string) {
@@ -7,7 +7,7 @@ export default class RequestHandler {
       if (!err && response.statusCode === 200) {
         return cheerio.load(html);
       } else {
-        return "Failed to fetch the content";
+        return 'Failed to fetch the content';
       }
     });
   }

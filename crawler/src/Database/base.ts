@@ -1,4 +1,4 @@
-import { Model, Column } from "sequelize-typescript";
+import { Model, Column } from 'sequelize-typescript';
 
 export class Base<T> extends Model<T> {
   @Column({
@@ -9,5 +9,4 @@ export class Base<T> extends Model<T> {
   id: number;
 }
 
-export const enumToStringArray = (enumType: object): string[] =>
-  Object.values(enumType);
+export const enumToStringArray = (enumType: object): string[] => Object.values(enumType);

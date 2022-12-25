@@ -4,14 +4,14 @@
   "description": "Craw adult content sites and store the in the database",
   "main": "index.js",
   "scripts": {
-      "clean": "rimraf dist/*",
-      "copy": "ts-node tools/copyAssets.ts",
-      "lint": "eslint . --ext .ts --fix",
-      "tsc": "./node_modules/.bin/tsc -p ./tsconfig.json",
-      "start:tsc": "ts-node src/app.ts",
-      "build:tsc": "./node_modules/.bin/cross-env NODE_ENV=production npm-run-all clean tsc",
-      "start:dev": "./node_modules/.bin/cross-env NODE_ENV=development npm-run-all lint start:tsc",
-      "start": "node ./dist/app.js"
+    "clean": "rimraf dist/*",
+    "copy": "ts-node tools/copyAssets.ts",
+    "lint": "eslint . --ext .ts --fix",
+    "tsc": "./node_modules/.bin/tsc -p ./tsconfig.json",
+    "start:tsc": "ts-node src/app.ts",
+    "build:tsc": "./node_modules/.bin/cross-env NODE_ENV=production npm-run-all clean tsc",
+    "start:dev": "./node_modules/.bin/cross-env NODE_ENV=development npm-run-all lint start:tsc",
+    "start": "node ./dist/app.js"
   },
   "keywords": [
     "adult",
@@ -77,8 +77,5 @@
       "node_modules/*",
       "build/*"
     ]
-  },
-  "engines": {
-    "node": "15.14.0"
   }
 }
