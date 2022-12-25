@@ -106,3 +106,5 @@ app.env
 crawler/.env.development
 data
 conf
+web/.local
+web/venv
