@@ -1,0 +1,26 @@
+{% extends 'partials/base.html' %}
+{% block  content %}
+    <head>
+      <title>Home | Pornexia</title>
+    </head>
+    <div class="video-section container mx-auto grid grid-cols-4 overflow-scroll h-screen" id="video"></div>
+ <script>
+    axios.get('/api/v1/all')
+        .then(({ data }) => {
+           console.log(data)
+            const parentContainer = document.getElementById("video");
+            const videosArr = data.data;
+            for (let v=0; v < videosArr.length; v++) {
+                parentContainer.innerHTML += `
+                  <div class="text-brdc">
+                     <div class="">
+                       <img src="${videosArr[v].video_image}" alt="${videosArr[v].video_title}" class="rounded-lg">
+                     </div>
+                       <h4 class="mb-3.5">${videosArr[v].video_title}</h4>
+                 </div>
+            `
+            }
+        })
+        .catch(error => console.log(error))
+ </script>
+{% endblock %}

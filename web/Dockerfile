@@ -1,0 +1,50 @@
+# base image
+FROM python:3.9.6-slim-buster as builder
+
+# Install os-level dependencies (as root)
+RUN apt-get update && apt-get install -y -q --no-install-recommends \
+  # dependencies for building Python packages
+  build-essential \
+  # postgres client (psycopg2) dependencies
+  libpq-dev \
+  # cleaning up unused files to reduce the image size
+  && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
+  && rm -rf /var/lib/apt/lists/*
+
+
+
+# create a non root user
+RUN adduser --home /home/web --shell /bin/bash  web
+USER web
+
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+ENV DockerHOME=/home/web
+ENV PATH="/home/web/.local/bin:${PATH}"
+
+# upgrade pip package
+RUN pip install --upgrade pip
+
+# set work directory
+RUN mkdir -p $DockerHOME
+
+# where your code lives
+WORKDIR $DockerHOME
+
+# copy requirement as current user
+COPY --chown=web:web requirements.txt $DockerHOME/requirements.txt
+
+# install packages as current user
+RUN pip install --user -r requirements.txt
+
+# copy whole project to your docker home directory.
+COPY --chown=web:web .  $DockerHOME
+
+# port where the Django app runs
+EXPOSE 8000
+
+# start server
+CMD gunicorn sites.wsgi:application --bind 0.0.0.0:8000
