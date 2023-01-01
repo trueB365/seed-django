@@ -1,15 +1,35 @@
-<div class="text-brdc">
-    <div class="relative overflow-hidden rounded mb-3.5">
-        <span class="absolute z-[3] top-[8px] right-[8px] text-[#fff] text-[14px] pointer-events-none">${videosArr[v].video_length}</span>
-        <a href="/video/${videosArr[v].id}">
-            <img alt="${videosArr[v].video_title}" class="rounded-lg object-cover w-full h-full"
-                 src="${videosArr[v].video_image}">
-        </a>
+<div class="col-span-1 text-brdc" id='${video.id}'>
+  <div class="relative overflow-hidden rounded mb-3.5" id="image">
+    <span class="absolute z-[3] top-[8px] right-[8px] text-[#fff] text-[14px] pointer-events-none"
+              style="text-shadow: 0 0 #fff, 0 0 2px rgb(0 0 0 / 60%), 0 0 12px rgb(0 0 0 / 60%);">
+          ${video.video_length}
+        </span>
+    <div onclick="playVideo(${video.id}, '${video.video_image}', '${video.video_link}')" class='hover:pointer-events-auto hover:cursor-pointer'>
+      <img alt="${video.video_title}" class="rounded-lg object-cover w-full h-full  brightness-90"
+           src="${video.video_image}">
     </div>
-    <a class="whitespace-nowrap overflow-hidden text-ellipsis text-[#fff] tracking-normal text-[.875rem] mb-3.5"
-       href="/video/${videosArr[v].id}">
+    <div class="grid grid-cols-4">
+      <div class='col-span-2'>
         <div class="whitespace-nowrap overflow-hidden text-ellipsis text-[#fff] tracking-normal text-[.875rem] mb-3.5">
-            ${videosArr[v].video_title}
+          ${video.video_title}
         </div>
-    </a>
+      </div>
+      <div class="col-span-2"></div>
+    </div>
+  </div>
+  <div class='video hidden'>
+    <h1 class="text-[24px] m-[0 2px 6px] break-words leading-[32px] text-[#fff]">
+      ${video.video_title}
+      <span class='duration'>${video.video_length}</span>
+    </h1>
+    <ul class='' id="keywords-${video.id}"></ul>
+{#    <video class='video-js vjs-theme-city' id='video-${video.id}' preload="auto"#}
+{#           style="width: 100%; height: 500px;" poster="${video.video_image}" controls>#}
+{#      <p class="vjs-no-js">#}
+{#        To view this video please enable JavaScript, and consider upgrading to a web browser that#}
+{#      </p>#}
+{#      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>#}
+{#    </video>#}
+    <div id="dplayer"></div>
+  </div>
 </div>

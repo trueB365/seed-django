@@ -80,7 +80,6 @@ WSGI_APPLICATION = "sites.wsgi.application"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 db_config = dj_database_url.config(
     default=os.getenv('DATABASE_URL'),
-    ssl_require=False,
 )
 db_config["ATOMIC_REQUESTS"] = True
 db_config["ENGINE"] = "django.db.backends.postgresql"
