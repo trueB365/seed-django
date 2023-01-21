@@ -14,6 +14,7 @@ export const generateXvideosScrappingResult = (URL: string) => {
   request(URL, async (err: any, response: any, html: any) => {
     if (!err && response.statusCode === 200) {
       const $ = cheerio.load(html);
+      console.log(html);
       const parentContainer = $('.mozaique').find('.thumb-block').find('.thumb-under');
 
       // @ts-ignore
