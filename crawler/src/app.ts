@@ -10,25 +10,16 @@ const server = createServer(app);
 const PORT = process.env.PORT || 3000;
 
 const startServer = async () => {
-  //  if (NODE_ENV === 'development') {
-  //    try {
-  //      const res = await kill(Number(PORT), 'tcp');
-  //      logger.debug(res);
-  //    } catch (err) {
-  //      logger.error(err);
-  //    }
-  //  }
-
   server.listen(PORT, async () => {
     logger.info('App running on port: ' + PORT);
-    // cron.schedule('* 59 * * * *', async (now) => {
-    //   logger.info(`[*] Running crawler at ${now}`);
-    try {
-      await videoExtractor();
-    } catch (error) {
-      console.log(error);
-    }
-    // });
+    cron.schedule('* 59 * * * *', async (now) => {
+      logger.info(`[*] Running crawler at ${now}`);
+      try {
+        await videoExtractor();
+      } catch (error) {
+        console.log(error);
+      }
+    });
   });
 };
 

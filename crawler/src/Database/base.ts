@@ -1,5 +1,6 @@
 import { Model, Column } from 'sequelize-typescript';
 
+// @ts-ignore
 export class Base<T> extends Model<T> {
   @Column({
     allowNull: false,
