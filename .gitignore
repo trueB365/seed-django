@@ -108,3 +108,7 @@ data
 conf
 web/.local
 web/venv
+web/node_modules
+web/.DS_Store
+**/__pycache__/
+.DS_Store

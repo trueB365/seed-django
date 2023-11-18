@@ -54,6 +54,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "sites.urls"
@@ -80,7 +81,7 @@ WSGI_APPLICATION = "sites.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 db_config = dj_database_url.config(
-    default=os.getenv('DATABASE_URL'),
+    default=os.getenv("DATABASE_URL"),
 )
 db_config["ATOMIC_REQUESTS"] = True
 db_config["ENGINE"] = "django.db.backends.postgresql"
@@ -129,8 +130,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 
 # Tailwind
-TAILWIND_APP_NAME = 'theme'
+TAILWIND_APP_NAME = "theme"
 
 INTERNAL_IPS = [
-    '127.0.0.1',
+    "127.0.0.1",
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True

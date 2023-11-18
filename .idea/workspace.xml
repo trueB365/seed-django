@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f178c17-f42e-4ce3-a449-3dbdfa288397" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/seed-django.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/seed-django.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/src/Database/base.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/src/Database/base.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/src/Modules/Xvideos/xvideos.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/src/Modules/Xvideos/xvideos.helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-development.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-development.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/sites/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="5f178c17-f42e-4ce3-a449-3dbdfa288397" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,7 +182,7 @@
       <workItem from="1672567937610" duration="21628000" />
       <workItem from="1674301392760" duration="1354000" />
       <workItem from="1687609725568" duration="20000" />
-      <workItem from="1687609753260" duration="11930000" />
+      <workItem from="1687609753260" duration="12002000" />
     </task>
     <servers />
   </component>

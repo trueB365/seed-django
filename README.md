@@ -7,3 +7,10 @@
 -  `python   crawler.py`
 - `python manage.py runserver`
 
+
+### Create super user
+Run the following the command
+
+```sh
+python manage.py createsuperuser --username=[admin_user] --email=[admin_email]
+```
