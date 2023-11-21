@@ -4,29 +4,24 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
-    fontFamily: {
-      display: ['Inter', 'system-ui', 'sans-serif'],
-      body: ['Inter', 'system-ui', 'sans-serif'],
-    },
-    colors: {
-      main: '#121212',
-      liwhite: 'rgba(238, 238, 238, 0.4)',
-      transparent: 'transparent',
-      current: 'currentColor',
-      black: colors.black,
-      white: colors.white,
-      emerald: colors.emerald,
-      indigo: colors.indigo,
-      yellow: colors.yellow,
-      stone: colors.warmGray,
-      sky: colors.lightBlue,
-      neutral: colors.trueGray,
-      gray: colors.coolGray,
-      slate: colors.blueGray,
-    },
-    flex: {
-      2: '0 0 auto',
+    extend: {
+      colors: {
+        ...colors,
+        main: {
+          DEFAULT: '#121212',
+        },
+        'main-white': {
+          DEFAULT: 'rgba(238, 238, 238, 0.4)',
+          lighter: 'hsla(0,0%,100%,.1)',
+        },
+      },
+      flex: {
+        2: '0 0 auto',
+      },
+      fontFamily: {
+        display: ['Inter', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],

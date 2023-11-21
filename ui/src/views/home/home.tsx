@@ -23,7 +23,7 @@ const Home = () => {
 
     return (
         <SideBar>
-            <div className="grid grid-cols-4 gap-4 mb-[1em]">
+            <div className="grid grid-cols-4 gap-4 mb-[1em] mt-[1.5em]">
                 {data ? data.data.map((video) => {
                     return (<div>
                         <VideoCard video={video} />

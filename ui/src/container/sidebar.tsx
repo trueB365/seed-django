@@ -2,7 +2,7 @@ import Navigation from "../components/Navigation";
 
 const SideBar = ({ children, ...otherProps }: any) => (<>
     <div className="flex flex-row w-screen fixed text-white" {...otherProps}>
-        <div className="basis-1/12 flex justify-center w-16 h-screen border-r border-r-liwhite text-liwhite">
+        <div className="basis-1/12 flex justify-center w-16 h-screen border-r border-r-main-white-lighter text-main-white">
             <ul className="m-12 list-none text-white">
                 <li className="mb-3.5">
                     <svg viewBox="0 0 16 16" width="2em" height="2em" focusable="false" role="img" aria-label="house"

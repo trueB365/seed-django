@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f178c17-f42e-4ce3-a449-3dbdfa288397" name="Changes" comment="" />
+    <list default="true" id="5f178c17-f42e-4ce3-a449-3dbdfa288397" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ui/src/assets/pornhub.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/assets/xhamster.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/assets/xvideo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/components/Navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/components/Navigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/components/VideoCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/components/VideoCard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/container/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/container/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/views/home/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/tailwind.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +55,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2JNZzYmuMfQuC4QS7srRXoG54BA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -57,7 +71,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "develop",
-    "last_opened_file_path": "/Users/bboxxadmin/work/seed/seed-django",
+    "last_opened_file_path": "/Users/bboxxadmin/work/seed/seed-django/ui/src/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,7 +79,7 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/bboxxadmin/work/seed/seed-django/crawler/node_modules/prettier",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/Users/bboxxadmin/work/seed/seed-django/crawler/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/bboxxadmin/work/seed/seed-django/ui/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -76,6 +90,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ui/src/assets" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -183,6 +198,11 @@
       <workItem from="1674301392760" duration="1354000" />
       <workItem from="1687609725568" duration="20000" />
       <workItem from="1687609753260" duration="12002000" />
+      <workItem from="1700423033806" duration="322000" />
+      <workItem from="1700423452614" duration="3452000" />
+      <workItem from="1700465717146" duration="14000" />
+      <workItem from="1700508028517" duration="3635000" />
+      <workItem from="1700595384903" duration="4288000" />
     </task>
     <servers />
   </component>
@@ -199,10 +219,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/seed_django$python__manage_py_migrate.coverage" NAME="python  manage.py migrate Coverage Results" MODIFIED="1671978613477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/seed_django$python___crawler_py.coverage" NAME="python   crawler.py Coverage Results" MODIFIED="1671978617252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/seed_django$python_manage_py_runserver.coverage" NAME="python manage.py runserver Coverage Results" MODIFIED="1671981362426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
