@@ -5,53 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f178c17-f42e-4ce3-a449-3dbdfa288397" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.resources.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Setting_up_SCRAM.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pgpass_file" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replica.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources-sample.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/public/Video-Placeholder-1024x684.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/public/pornhub.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/public/xhamster.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/public/xvideo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/src/app/components/FloatingButton/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/src/app/components/FloatingNavigation/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/src/app/components/ImageFallback/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/src/app/components/Navigation/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/src/app/components/VideoCard/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/src/app/container/sidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/src/app/hooks/axios.hook.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-0/src/app/views/home/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/components/FloatingButton/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/components/FloatingNavigation/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/seed-django.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/seed-django.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-sample.env" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/src/Config/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/src/Config/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/src/Config/sequelize.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/src/Config/sequelize.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/src/Database/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/src/Database/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-development.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-production.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Removing_all_tables.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/components/Navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/components/Navigation/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/components/VideoCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/components/VideoCard/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/container/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/container/sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/views/home/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/web/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/sites/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/sites/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/video/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/video/migrations/0002_video_createdat_video_deletedat_video_updatedat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/video/migrations/0003_alter_video_deletedat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/video/migrations/0004_alter_video_deletedat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/video/migrations/0005_alter_video_video_image_alter_video_video_keyword_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/video/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/video/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/video/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/video/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources-sample.env" beforeDir="false" afterPath="$PROJECT_DIR$/resources-sample.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +222,7 @@
       <workItem from="1701866991419" duration="598000" />
       <workItem from="1701876213197" duration="490000" />
       <workItem from="1702117342216" duration="115000" />
-      <workItem from="1702121361171" duration="22528000" />
+      <workItem from="1702121361171" duration="23198000" />
     </task>
     <servers />
   </component>
