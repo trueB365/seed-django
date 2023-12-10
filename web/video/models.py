@@ -9,6 +9,7 @@ from django.utils import timezone
 
 
 class Video(models.Model):
+    id = models.BigAutoField(primary_key=True)
     video_link = models.TextField(null=True, blank=True)
     video_image = models.TextField(null=True, blank=True)
     video_length = models.CharField(max_length=255)

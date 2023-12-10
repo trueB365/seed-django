@@ -17,7 +17,7 @@ const companyLogoHandler = (video_source: string | undefined) => {
 
 const VideoCard = ({ video }: PropVideo) => {
   return (
-    <a className='item-link rate-link overflow-hidden block text-[#fff] text-[.875rem]' href={video.video_url}
+    <a className='w-full item-link rate-link overflow-hidden block text-[#fff] text-[.875rem]' href={video.video_url}
        title={video.video_title} rel='noreferrer' target='_blank'>
       <div className='relative z-0'>
         <ImageWithFallback

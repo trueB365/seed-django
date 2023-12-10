@@ -31,3 +31,19 @@ html, body {
     right: 8px;
     text-shadow: 0 0 #fff, 0 0 2px rgba(0, 0, 0, .6), 0 0 12px rgba(0, 0, 0, .6);
 }
+
+.floating-button {
+    backdrop-filter: saturate(1.8) blur(20px) !important;
+    background: radial-gradient(rgba(0,0,0,.12) 0,hsla(0,0%,100%,.12) 100%) !important;
+    border: 1px solid hsla(0,0%,100%,.08) !important;
+    bottom: 24px;
+    color: hsla(0,0%,100%,.72) !important;
+}
+
+.floating-navigation {
+    -webkit-backdrop-filter: saturate(1.8) blur(20px);
+    backdrop-filter: saturate(1.8) blur(20px);
+    background-color: rgba(30,30,30,.72);
+    box-shadow: 0 -3px 1px -2px rgba(0,0,0,.2), 0 -2px 2px 0 rgba(0,0,0,.14), 0 -1px 5px 0 rgba(0,0,0,.12);
+    transition: all .2s ease-in-out;
+}

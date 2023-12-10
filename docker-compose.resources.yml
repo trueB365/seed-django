@@ -1,0 +1,119 @@
+version: "3.9"
+
+services:
+  postgres-master:
+    image: bitnami/postgresql:latest
+    restart: always
+    container_name: postgres-master
+    environment:
+      - POSTGRESQL_REPLICATION_MODE=master
+    env_file:
+      - resources.env
+    networks:
+      - postgres-network
+    volumes:
+      - seed-master-data:/bitnami/postgresql
+      - ./config/postgres-master.conf:/bitnami/postgresql/postgresql.conf
+      - ./config/pg_hba.conf:/bitnami/postgresql/pg_hba.conf
+
+  postgres-replica1:
+    image: bitnami/postgresql:latest
+    restart: always
+    container_name: postgres-replica1
+    environment:
+      - POSTGRESQL_REPLICATION_MODE=slave
+      - POSTGRESQL_MASTER_HOST=postgres-master
+      - POSTGRESQL_MASTER_PORT_NUMBER=5432
+    env_file:
+      - resources.env
+    networks:
+      - postgres-network
+    volumes:
+      - seed-replica1-data:/bitnami/postgresql
+
+  postgres-replica2:
+    image: bitnami/postgresql:latest
+    restart: always
+    container_name: postgres-replica2
+    environment:
+      - POSTGRESQL_REPLICATION_MODE=slave
+      - POSTGRESQL_MASTER_HOST=postgres-master
+      - POSTGRESQL_MASTER_PORT_NUMBER=5432
+    env_file:
+      - resources.env
+    networks:
+      - postgres-network
+    volumes:
+      - seed-replica2-data:/bitnami/postgresql
+
+  pgpool:
+    image: bitnami/pgpool:latest
+    container_name: pgpool
+    ports:
+      - "5432:5432"
+    env_file:
+      - resources.env
+    depends_on:
+        - postgres-master
+        - postgres-replica1
+        - postgres-replica2
+    networks:
+        - postgres-network
+
+  dbeaver:
+    image: dbeaver/cloudbeaver:latest
+    restart: always
+    container_name: dbeaver
+    env_file:
+      - resources.env
+    ports:
+      - "8090:8978"
+    depends_on:
+      - postgres-master
+      - postgres-replica1
+      - postgres-replica2
+    networks:
+      - postgres-network
+    volumes:
+      - seed-dbeaver-data:/opt/cloudbeaver/workspace
+
+  redis:
+    image: redis:latest
+    restart: always
+    container_name: redis
+    env_file:
+      - resources.env
+    ports:
+      - "6379:6379"
+    networks:
+      - postgres-network
+    volumes:
+      - seed-dbeaver-data:/opt/cloudbeaver/workspace
+
+  redisui:
+    image: redislabs/redisinsight:latest
+    restart: always
+    container_name: redisui
+    env_file:
+      - resources.env
+    ports:
+      - "8001:8001"
+    depends_on:
+      - redis
+    networks:
+      - postgres-network
+    volumes:
+      - seed-redisui-data:/db
+
+volumes:
+  seed-master-data:
+  seed-replica1-data:
+  seed-replica2-data:
+  seed-dbeaver-data:
+  seed-redis-data:
+  seed-redisui-data:
+
+networks:
+  postgres-network:
+    name: postgres-network
+    external: true

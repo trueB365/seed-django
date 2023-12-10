@@ -63,7 +63,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(HomeView, self).get_context_data(*args, **kwargs)
-        context["pageTitle"] = "Home | Pornoxeia.com"
+        context["pageTitle"] = "Page | Pornoxeia.com"
         return context
 
 

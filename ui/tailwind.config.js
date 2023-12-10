@@ -13,6 +13,7 @@ module.exports = {
         'main-white': {
           DEFAULT: 'rgba(238, 238, 238, 0.4)',
           lighter: 'hsla(0,0%,100%,.1)',
+          light: 'hsla(0,0%,93%,.8)',
         },
       },
       flex: {

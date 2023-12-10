@@ -11,12 +11,10 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import dj_database_url
 
 print(os.getenv("DJANGO_ALLOWED_HOSTS"))
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -29,7 +27,6 @@ DEBUG = int(os.getenv("DEBUG", default=0))
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS").split(" ")
 CSRF_TRUSTED_ORIGINS = os.getenv("DJANGO_CSRF_TRUSTED_ORIGINS").split(" ")
-
 
 # Application definition
 
@@ -77,16 +74,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "sites.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-db_config = dj_database_url.config(
-    default=os.getenv("DATABASE_URL"),
-)
-db_config["ATOMIC_REQUESTS"] = True
-db_config["ENGINE"] = "django.db.backends.postgresql"
+DATABASES = {
+    "default":  {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'seedx',
+        'USER': 'seed',
+        'PASSWORD': '1NbS0NgTGlxqKQU2J1a',
+        'HOST': '127.0.0.1',  # Set to 'localhost' if local
+        'PORT': '5432',
+    }
+}
 
-DATABASES = {"default": db_config}
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -106,7 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -120,14 +120,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-
 
 # Tailwind
 TAILWIND_APP_NAME = "theme"

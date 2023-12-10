@@ -14,3 +14,5 @@ Run the following the command
 ```sh
 python manage.py createsuperuser --username=[admin_user] --email=[admin_email]
 ```
+
+psql "host=127.0.0.1 dbname=seedx user=seed password=1NbS0NgTGlxqKQU2J1a"

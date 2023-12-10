@@ -3,11 +3,15 @@ import { createServer } from 'http';
 import logger from './Config/logger.config';
 import { videoExtractor } from './Modules';
 import cron from 'node-cron';
-//import { NODE_ENV } from './Config/app.config';
 
 const app: express.Application = express();
 const server = createServer(app);
 const PORT = process.env.PORT || 3000;
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
 
 const startServer = async () => {
   server.listen(PORT, async () => {

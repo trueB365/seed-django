@@ -17,15 +17,24 @@ const result = dotenv.config({ path: dir });
 if (result.error) {
   throw result.error;
 }
-const DATABASE_URL = process.env.DATABASE_URL;
+
+const PG_HOST=process.env.PG_HOST
+const PG_PORT=process.env.PG_PORT
 const DATABASE_DIALECT = process.env.DATABASE_DIALECT;
 
 const config = {
   [environment]: {
-    url: DATABASE_URL,
+    host: PG_HOST || 'localhost',
     dialect: DATABASE_DIALECT || 'postgres',
-    logging: false,
+    logging: environment.trim() === 'development' ? console.log : false,
     use_env_variable: 'DATABASE_URL',
+    port: PG_PORT || 5432,
+    // dialectOptions: {
+    //   ssl: {
+    //     require: true,
+    //     rejectUnauthorized: false,
+    //   },
+    // }
   },
 };
 

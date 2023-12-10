@@ -1,6 +1,5 @@
-psycopg2-binary==2.9.5
 arrow==1.2.3
-asgiref==3.5.2
+asgiref==3.7.2
 async-timeout==4.0.2
 azure-cognitiveservices-speech==1.24.2
 binaryornot==0.4.4
@@ -16,6 +15,7 @@ Deprecated==1.2.13
 dj-database-url==1.0.0
 Django==4.1.1
 django-browser-reload==1.6.0
+django-cors-headers==4.3.1
 django-rest-framework==0.1.0
 django-tailwind==3.4.0
 djangorestframework==3.14.0
@@ -34,6 +34,7 @@ MarkupSafe==2.1.1
 media==0.1.6
 packaging==21.3
 pathspec==0.10.1
+psycopg2-binary==2.9.5
 pyparsing==3.0.9
 python-dateutil==2.8.2
 python-slugify==7.0.0
