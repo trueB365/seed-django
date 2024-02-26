@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f178c17-f42e-4ce3-a449-3dbdfa288397" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-1/src/app/container/theme_provider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-1/src/app/hooks/axios.hook.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources-sample.env" beforeDir="false" afterPath="$PROJECT_DIR$/resources-sample.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-0/src/app/components/VideoCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/template-0/src/app/components/VideoCard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-0/src/app/views/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/template-0/src/app/views/home/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +71,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "develop",
-    "last_opened_file_path": "/Users/bboxxadmin/work/seed/seed-django/template-0/src/app",
+    "last_opened_file_path": "/Users/bboxxadmin/work/seed/seed-django/template-1/src/app/hooks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,6 +90,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/template-1/src/app/hooks" />
       <recent name="$PROJECT_DIR$/template-0/src/app" />
       <recent name="$PROJECT_DIR$/ui/src/components/FloatingButton" />
       <recent name="$PROJECT_DIR$/ui/src/assets" />
@@ -187,7 +190,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-67fca87a943a-c986f194a52a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.11799.259" />
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
@@ -222,7 +225,12 @@
       <workItem from="1701866991419" duration="598000" />
       <workItem from="1701876213197" duration="490000" />
       <workItem from="1702117342216" duration="115000" />
-      <workItem from="1702121361171" duration="23198000" />
+      <workItem from="1702121361171" duration="24709000" />
+      <workItem from="1702362104078" duration="10000" />
+      <workItem from="1702991971346" duration="75000" />
+      <workItem from="1708949430838" duration="131000" />
+      <workItem from="1708949571921" duration="259000" />
+      <workItem from="1708949857671" duration="10421000" />
     </task>
     <servers />
   </component>
