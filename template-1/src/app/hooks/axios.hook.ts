@@ -9,11 +9,15 @@ interface UseAxiosFetchProps<T> {
     headers?: Record<string, string>;
 }
 
+
+
+
 const useAxiosFetch = <T,>(props: UseAxiosFetchProps<T>) => {
     const { url, method, data: requestData, headers } = props;
     const [data, setData] = useState<T | null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | null>(null);
+    const [queryParams, setQueryParams] = useState<{[key:string]: string | number | null } | null>(null)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -24,6 +28,7 @@ const useAxiosFetch = <T,>(props: UseAxiosFetchProps<T>) => {
                     method,
                     data: requestData,
                     headers,
+                    params: { ...queryParams }
                 });
                 setData(response.data);
             } catch (err) {
@@ -36,9 +41,9 @@ const useAxiosFetch = <T,>(props: UseAxiosFetchProps<T>) => {
         if (url && method) {
             fetchData();
         }
-    }, [url, method, requestData, headers]);
+    }, [url, method, requestData, headers, queryParams]);
 
-    return { data, isLoading, error };
+    return { data, isLoading, error, setQueryParams };
 };
 
 export default useAxiosFetch;

@@ -3,24 +3,23 @@ import os
 import re
 
 import requests
-
 from django.shortcuts import render
+from django.utils import timezone
+from django.views.generic import TemplateView
 from rest_framework import status
+from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.views.generic import TemplateView
-from django.utils import timezone
 
+from .VideoPaginations import VideoCursorPagination
 from .models import Video
 from .serializers import VideoSerializer
-from django.utils.dateparse import parse_date
 
 
-class VideoListApiView(APIView):
-    def get(self, request, *args, **kwargs):
-        video_list = Video.objects.order_by("video_update")[:50]
-        serializer = VideoSerializer(video_list, many=True)
-        return Response({"data": serializer.data}, status=status.HTTP_200_OK)
+class VideoListApiView(ListAPIView):
+    queryset = Video.objects.all().order_by('video_update')
+    serializer_class = VideoSerializer
+    pagination_class = VideoCursorPagination
 
 
 class VideoRefreshAPIView(APIView):
