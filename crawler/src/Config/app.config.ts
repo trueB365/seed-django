@@ -18,8 +18,13 @@ const schema = Joi.object()
     PG_USERNAME: Joi.string().required(),
     PG_PASSWORD: Joi.string().required(),
     PG_DATABASE: Joi.string().required(),
-    PG_HOST: Joi.string().default("127.0.0.1").required(),
+    PG_HOST: Joi.string().default('127.0.0.1').required(),
     PG_PORT: Joi.number().default(5432).required(),
+    MONGODB_URL: Joi.string().required(),
+    DBAUTHSOURCE: Joi.string().required(),
+    DBUSER: Joi.string().required(),
+    DBPASS: Joi.string().required(),
+    DBNAME: Joi.string().required(),
   })
   .unknown();
 
@@ -43,5 +48,10 @@ export const {
   PG_HOST,
   PG_PORT,
   HEADLESS_STATUS,
-  NODE_ENV
+  NODE_ENV,
+  DBAUTHSOURCE,
+  DBUSER,
+  DBPASS,
+  DBNAME,
+  MONGODB_URL,
 } = envVars;

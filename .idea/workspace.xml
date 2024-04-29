@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f178c17-f42e-4ce3-a449-3dbdfa288397" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/template-1/public/static/images/website_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-1/src/app/components/VideoCard/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-1/src/app/components/VideoSkeleton/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-1/src/app/container/ThemeProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-1/src/app/types/theme.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-1/src/app/views/home/Index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/video/VideoPaginations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-1/src/app/components/MainNavigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/template-1/src/app/components/MainNavigation/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-1/src/app/container/theme_provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/template-1/src/app/components/GenericFooter/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-1/src/app/hooks/axios.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/template-1/src/app/hooks/axios.hook.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-1/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/template-1/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-1/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/template-1/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-1/src/app/views/home/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/sites/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/video/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/video/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/video/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/video/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +190,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-js-predefined-1d06a55b98c1-985749b364ce-JavaScript-WS-233.14015.89" />
       </set>
     </attachedChunks>
   </component>
@@ -251,7 +235,8 @@
       <workItem from="1709109579739" duration="18738000" />
       <workItem from="1709461384065" duration="48000" />
       <workItem from="1709461452961" duration="84000" />
-      <workItem from="1709461546583" duration="646000" />
+      <workItem from="1709461546583" duration="2328000" />
+      <workItem from="1710183718986" duration="26000" />
     </task>
     <servers />
   </component>
