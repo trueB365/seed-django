@@ -14,6 +14,7 @@ export interface PornVideo {
   video_recomend?: number;
   video_views?: number;
   video_preview_link?: string;
+  video_original_id?: string;
 }
 
 interface MongoPornVideo extends PornVideo, Document {}
@@ -32,6 +33,7 @@ const pornVideoSchema = new Schema<MongoPornVideo>({
   video_recomend: { type: Number },
   video_views: { type: Number },
   video_preview_link: { type: String },
+  video_original_id: { type: String },
 });
 
 export const PornCollection = model<PornVideo>('porn', pornVideoSchema);

@@ -6,6 +6,7 @@ interface Pornstar {
   country?: string;
   video_count?: number;
   video_views?: number;
+  bio?: string;
 }
 
 interface MongoPornstar extends Pornstar, Document {}
@@ -16,6 +17,7 @@ const pornstarSchema = new Schema<MongoPornstar>({
   country: { type: String },
   video_count: { type: Number },
   video_views: { type: Number },
+  bio: { type: String },
 });
 
 export const PornstarCollection = model<MongoPornstar>('pornstar', pornstarSchema);

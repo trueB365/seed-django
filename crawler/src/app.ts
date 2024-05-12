@@ -4,8 +4,9 @@ import mongoose from 'mongoose';
 import logger from './Config/logger.config';
 import { videoExtractor } from './Modules';
 import cron from 'node-cron';
-import { ThreeMovsService } from './Modules/3movs/3movs.service';
+import ThreeMovsService from './Modules/3movs/3movs.service';
 import { MONGODB_URL, DBAUTHSOURCE, DBUSER, DBPASS, DBNAME } from './Config/app.config';
+import AnalVidsService from './Modules/Analvids/analvids.service';
 
 const app: express.Application = express();
 const server = createServer(app);
@@ -42,7 +43,9 @@ const startServer = async () => {
       logger.info('MongoDB connection is established');
       server.listen(PORT, () => logger.info('App running on port: ' + PORT));
       const threeMovsService = new ThreeMovsService();
-      await threeMovsService.getVideoDetails();
+      const analVidsService = new AnalVidsService();
+      await threeMovsService.scrapeVideosBasedOnCategory();
+      await analVidsService.scrapeVideosBasedOnCategory();
     })
     .catch((err: any) => {
       logger.error(JSON.stringify(err, null, 2));

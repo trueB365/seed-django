@@ -25,6 +25,8 @@ const schema = Joi.object()
     DBUSER: Joi.string().required(),
     DBPASS: Joi.string().required(),
     DBNAME: Joi.string().required(),
+    REDIS_HOST: Joi.string(),
+    REDIS_PORT: Joi.number(),
   })
   .unknown();
 
@@ -54,4 +56,6 @@ export const {
   DBPASS,
   DBNAME,
   MONGODB_URL,
+  REDIS_HOST,
+  REDIS_PORT,
 } = envVars;

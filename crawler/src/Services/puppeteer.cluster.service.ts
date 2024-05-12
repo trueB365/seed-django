@@ -1,6 +1,7 @@
 import { Cluster } from 'puppeteer-cluster';
+import { PuppeteerService } from './puppeteer.service';
 
-export class PuppeteerClusterService {
+export class PuppeteerClusterService extends PuppeteerService {
   async createCluster<T>() {
     return await Cluster.launch({
       concurrency: Cluster.CONCURRENCY_PAGE,

@@ -49,6 +49,7 @@
   "dependencies": {
     "@types/puppeteer": "^5.4.7",
     "@types/redis": "^4.0.11",
+    "bullmq": "^5.7.8",
     "cheerio": "^1.0.0-rc.12",
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
