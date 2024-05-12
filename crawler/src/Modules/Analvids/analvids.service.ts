@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio';
-import PornScrapeBaseModule, { SearchableTags } from '../Shared/base.module';
+import PornScrapeBaseModule from '../Shared/base.module';
 import { PornVideo } from '../../DocumentDB';
 
 class AnalVidsService extends PornScrapeBaseModule {
