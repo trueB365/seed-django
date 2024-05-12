@@ -20,13 +20,22 @@ class AnalVidsService extends PornScrapeBaseModule {
     return $(element).find('.card-scene__info > .card-scene__title').text();
   }
 
+  timeStringToSeconds(timeString: string): number {
+    let time_component = timeString.split(' ');
+    return time_component.slice(0, -1)[0] === 'h'
+      ? parseInt(time_component[0]) * 3600
+      : parseInt(time_component[0]) * 60;
+  }
+
   videoInfoSchema($: cheerio.CheerioAPI, element: cheerio.AnyNode): PornVideo {
     return {
       video_title: $(element).find('.card-scene__text > a').text(),
       video_image: $(element).find('.card-scene__view > a > img').attr('src') as string,
       video_link: $(element).find('.card-scene__view > a').attr('href') as string,
       video_source: 'analvids',
-      video_length: 0,
+      video_length: this.timeStringToSeconds(
+        $(element).find('.card-scene__view > .card-scene__time > .label--time').text(),
+      ),
       video_preview_link: $(element).find('.card-scene__view > a').attr('data-preview') as string,
       video_original_id: $(element).attr('data-content') as string,
     };

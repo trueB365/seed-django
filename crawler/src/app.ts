@@ -2,8 +2,6 @@ import express from 'express';
 import { createServer } from 'http';
 import mongoose from 'mongoose';
 import logger from './Config/logger.config';
-import { videoExtractor } from './Modules';
-import cron from 'node-cron';
 import ThreeMovsService from './Modules/3movs/3movs.service';
 import { MONGODB_URL, DBAUTHSOURCE, DBUSER, DBPASS, DBNAME } from './Config/app.config';
 import AnalVidsService from './Modules/Analvids/analvids.service';
