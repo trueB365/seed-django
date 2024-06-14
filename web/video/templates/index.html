@@ -1,0 +1,98 @@
+{% extends 'partials/base.html' %}
+{% block  content %}
+<div class="container mx-auto overflow-scroll h-screen">
+  <div class='grid grid-cols-4 gap-4' id="video"></div>
+</div>
+<script>
+
+    axios.get('/api/v1/all')
+        .then(({data}) => {
+            console.log(data)
+            const parentContainer = document.getElementById("video");
+            const videosArr = data.data;
+            if(videosArr.length > 0) {
+              videosArr.map((video) => {
+                parentContainer.innerHTML += `{% include "partials/video-card.html" %}`
+                const keywordContainer = document.getElementById(`keywords-${video.id}`)
+                video.video_keyword.split(",").map(word => {
+                  keywordContainer.innerHTML += `{% include "partials/tags.html" %}`
+                })
+              })
+            }
+        })
+        .catch(error => console.log(error))
+
+    const playVideo = (id, cover_img, video_url) => {
+      const videoEl = $(`#${id}`)
+      const prevVideoEl = $("div[data-play='currentPlay']")
+
+      prevVideoEl.find("img").removeClass("hidden")
+      prevVideoEl.find(".video").addClass("hidden")
+      prevVideoEl.removeAttr("data-play")
+      prevVideoEl.removeClass("full-video")
+
+      videoEl.attr("data-play",`currentPlay`).addClass("full-video")
+      videoEl.find("#image").addClass("hidden")
+      videoEl.find(".video").removeClass("hidden")
+
+      const dp = new DPlayer({
+          container: document.getElementById('dplayer'),
+          screenshot: true,
+          theme: '#FADFA3',
+          autoplay: false,
+          preload: 'auto',
+          hotkey: true,
+          video: {
+              url: video_url,
+              pic: cover_img,
+              thumbnails: 'thumbnails.jpg',
+          },
+           danmaku: {
+              id: '9E2E3368B56CDBB4',
+              api: 'https://api.prprpr.me/dplayer/',
+              token: 'tokendemo',
+              maximum: 1000,
+              addition: ['https://api.prprpr.me/dplayer/v3/bilibili?aid=4157142'],
+              user: 'DIYgod',
+              bottom: '15%',
+              unlimited: true,
+              speedRate: 0.5,
+          },
+          contextmenu: [
+              {
+                  text: 'custom1',
+                  link: 'https://github.com/DIYgod/DPlayer',
+              },
+              {
+                  text: 'custom2',
+                  click: (player) => {
+                      console.log(player);
+                  },
+              },
+          ],
+          highlight: [
+              {
+                  text: 'marker for 20s',
+                  time: 20,
+              },
+              {
+                  text: 'marker for 2mins',
+                  time: 120,
+              },
+          ],
+      });
+
+      axios.get(`/api/v1/video/refresh?video_id=${id}`)
+        .then(({data}) => {
+           console.log(data)
+            const videoContainer= $(`#video-${id}`);
+           console.log(dp)
+            dp.video.url = data.video_link;
+            {#videoContainer.attr("src", data.video_link)#}
+
+        })
+        .catch(error => console.log(error))
+
+    }
+</script>
+{% endblock %}

@@ -85,7 +85,7 @@ celerybeat-schedule
 .env
 .venv
 env/
-venv/
+../venv/
 ENV/
 env.bak/
 venv.bak/
@@ -97,9 +97,20 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
+
 
 # mypy
 .mypy_cache/
-
+crawler/node_modules
+app.env
+crawler/.env.development
+data
+conf
+web/.local
+web/venv
+web/node_modules
+web/.DS_Store
+**/__pycache__/
+.DS_Store
+resources.env
+replica.env

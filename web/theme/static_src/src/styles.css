@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.full-video {
+    @apply col-span-4;
+}
+
+.video-tag {
+    background: #888;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: none;
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+    padding: 0 6px;
+    text-shadow: none;
+    vertical-align: middle;
+    white-space: normal;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.duration {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 22px;
+    height: 22px;
+    padding: 0 6px;
+    background: #888;
+    border-radius: 3px;
+    color: #000;
+    font-weight: 700;
+    margin: 5px 0 0 4px;
+    vertical-align: top;
+}
